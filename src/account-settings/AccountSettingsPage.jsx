@@ -65,9 +65,9 @@ class AccountSettingsPage extends React.Component {
 
     this.navLinkRefs = {
       '#basic-information': React.createRef(),
+      '#professional-information': React.createRef(),
       '#profile-information': React.createRef(),
       '#social-media': React.createRef(),
-      '#notifications': React.createRef(),
       '#site-preferences': React.createRef(),
       '#linked-accounts': React.createRef(),
       '#delete-account': React.createRef(),
@@ -653,6 +653,15 @@ class AccountSettingsPage extends React.Component {
               {...editableFieldProps}
             />
             )}
+          <EditableField
+            name="phone_number"
+            type="tel"
+            value={this.props.formValues.phone_number}
+            label={this.props.intl.formatMessage(messages['account.settings.field.phone.number'])}
+            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.phone.number.empty'])}
+            helpText={this.props.intl.formatMessage(messages['account.settings.field.phone.number.help.text'])}
+            {...editableFieldProps}
+          />
           <EditableSelectField
             name="country"
             type="select"
@@ -684,6 +693,102 @@ class AccountSettingsPage extends React.Component {
               {...editableFieldProps}
             />
             )}
+          <EditableField
+            name="city"
+            type="text"
+            value={this.props.formValues.city}
+            label={this.props.intl.formatMessage(messages['account.settings.field.city'])}
+            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.city.empty'])}
+            helpText={this.props.intl.formatMessage(messages['account.settings.field.city.help.text'])}
+            {...editableFieldProps}
+          />
+        </div>
+        <div className="account-section pt-3 mb-5" id="professional-information" ref={this.navLinkRefs['#professional-information']}>
+          <h2 className="section-heading h4 mb-3">
+            {this.props.intl.formatMessage(messages['account.settings.section.professional.information'])}
+          </h2>
+          <EditableField
+            name="position"
+            type="text"
+            value={this.props.formValues.position}
+            label={this.props.intl.formatMessage(messages['account.settings.field.position'])}
+            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.position.empty'])}
+            helpText={this.props.intl.formatMessage(messages['account.settings.field.position.help.text'])}
+            isEditable={false}
+            {...editableFieldProps}
+          />
+          <EditableField
+            name="mailing_address"
+            type="textarea"
+            value={this.props.formValues.mailing_address}
+            label={this.props.intl.formatMessage(messages['account.settings.field.mailing.address'])}
+            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.mailing.address.empty'])}
+            helpText={this.props.intl.formatMessage(messages['account.settings.field.mailing.address.help.text'])}
+            rows={3}
+            {...editableFieldProps}
+          />
+          <EditableField
+            name="company_name"
+            type="text"
+            value={this.props.formValues.company_name}
+            label={this.props.intl.formatMessage(messages['account.settings.field.company.name'])}
+            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.company.name.empty'])}
+            helpText={this.props.intl.formatMessage(messages['account.settings.field.company.name.help.text'])}
+            {...editableFieldProps}
+          />
+
+          <EditableField
+            name="company_inn"
+            type="tel"
+            value={this.props.formValues.company_inn}
+            label={this.props.intl.formatMessage(messages['account.settings.field.company.inn'])}
+            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.company.inn.empty'])}
+            helpText={this.props.intl.formatMessage(messages['account.settings.field.company.inn.help.text'])}
+            {...editableFieldProps}
+          />
+
+          <div className="row">
+            <div className="col-md-3">
+              <EditableSelectField
+                name="birth_month"
+                type="select"
+                value={this.props.formValues.birth_month}
+                options={[
+                  { value: '', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.empty']) },
+                    { value: '1', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.january']) },
+                    { value: '2', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.february']) },
+                    { value: '3', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.march']) },
+                    { value: '4', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.april']) },
+                    { value: '5', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.may']) },
+                    { value: '6', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.june']) },
+                    { value: '7', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.july']) },
+                    { value: '8', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.august']) },
+                    { value: '9', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.september']) },
+                    { value: '10', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.october']) },
+                    { value: '11', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.november']) },
+                    { value: '12', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.december']) },
+                ]}
+                label={this.props.intl.formatMessage(messages['account.settings.field.birth.month'])}
+                {...editableFieldProps}
+              />
+            </div>
+            <div className="col-md-3">
+              <EditableSelectField
+                name="birth_day"
+                type="select"
+                value={this.props.formValues.birth_day}
+                options={[
+                  { value: '', label: this.props.intl.formatMessage(messages['account.settings.field.birth.day.empty']) },
+                  ...Array.from({ length: 31 }, (_, i) => ({
+                    value: (i + 1).toString(),
+                    label: (i + 1).toString()
+                  }))
+                ]}
+                label={this.props.intl.formatMessage(messages['account.settings.field.birth.day'])}
+                {...editableFieldProps}
+              />
+            </div>
+          </div>
         </div>
 
         <div className="account-section pt-3 mb-5" id="profile-information" ref={this.navLinkRefs['#profile-information']}>
@@ -891,6 +996,7 @@ AccountSettingsPage.propTypes = {
     secondary_email_enabled: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
     year_of_birth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     country: PropTypes.string,
+    city: PropTypes.string,
     level_of_education: PropTypes.string,
     gender: PropTypes.string,
     extended_profile: PropTypes.arrayOf(PropTypes.shape({

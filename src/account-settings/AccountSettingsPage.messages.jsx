@@ -251,6 +251,181 @@ const messages = defineMessages({
     defaultMessage: 'Add year of birth',
     description: 'Placeholder for empty account settings year of birth field.',
   },
+  'account.settings.field.phone.number': {
+    id: 'account.settings.field.phone.number',
+    description: 'Phone number field label',
+    defaultMessage: 'Phone number'
+  },
+  'account.settings.field.phone.number.empty': {
+    id: 'account.settings.field.phone.number.empty',
+    description: 'Empty phone number field label',
+    defaultMessage: 'Add phone number'
+  },
+  'account.settings.field.phone.number.help.text': {
+    id: 'account.settings.field.phone.number.help.text',
+    description: 'Help text for phone number field',
+    defaultMessage: 'Your phone number (optional, not unique)'
+  },
+  'account.settings.field.city': {
+    id: 'account.settings.field.city',
+    description: 'City field label',
+    defaultMessage: 'City'
+  },
+  'account.settings.field.city.empty': {
+    id: 'account.settings.field.city.empty',
+    description: 'Empty city field label',
+    defaultMessage: 'Add city'
+  },
+  'account.settings.field.city.help.text': {
+    id: 'account.settings.field.city.help.text',
+    description: 'Help text for city field',
+    defaultMessage: 'Your city of residence'
+  },
+  'account.settings.field.mailing.address': {
+    id: 'account.settings.field.mailing.address',
+    description: 'Mailing address field label',
+    defaultMessage: 'Mailing address'
+  },
+  'account.settings.field.mailing.address.empty': {
+    id: 'account.settings.field.mailing.address.empty',
+    description: 'Empty mailing address field label',
+    defaultMessage: 'Add mailing address'
+  },
+  'account.settings.field.mailing.address.help.text': {
+    id: 'account.settings.field.mailing.address.help.text',
+    description: 'Help text for mailing address field',
+    defaultMessage: 'Your complete mailing address'
+  },
+  'account.settings.section.professional.information': {
+    id: 'account.settings.section.professional.information',
+    description: 'Professional information section heading',
+    defaultMessage: 'Professional Information'
+  },
+  'account.settings.field.position': {
+    id: 'account.settings.field.position',
+    description: 'Position field label',
+    defaultMessage: 'Position'
+  },
+  'account.settings.field.position.empty': {
+    id: 'account.settings.field.position.empty',
+    description: 'Empty position field label',
+    defaultMessage: 'Add position'
+  },
+  'account.settings.field.position.help.text': {
+    id: 'account.settings.field.position.help.text',
+    description: 'Help text for position field',
+    defaultMessage: 'Your job position (not editable)'
+  },
+  'account.settings.field.company.name': {
+    id: 'account.settings.field.company.name',
+    description: 'Company name field label',
+    defaultMessage: 'Company name'
+  },
+  'account.settings.field.company.name.empty': {
+    id: 'account.settings.field.company.name.empty',
+    description: 'Empty company name field label',
+    defaultMessage: 'Add company name'
+  },
+  'account.settings.field.company.name.help.text': {
+    id: 'account.settings.field.company.name.help.text',
+    description: 'Help text for company name field',
+    defaultMessage: 'Name of your company/organization'
+  },
+  'account.settings.field.company.inn': {
+    id: 'account.settings.field.company.inn',
+    description: 'Company INN field label',
+    defaultMessage: 'Company INN'
+  },
+  'account.settings.field.company.inn.empty': {
+    id: 'account.settings.field.company.inn.empty',
+    description: 'Empty company INN field label',
+    defaultMessage: 'Add company INN'
+  },
+  'account.settings.field.company.inn.help.text': {
+    id: 'account.settings.field.company.inn.help.text',
+    description: 'Help text for company INN field',
+    defaultMessage: 'Tax identification number (10 or 12 digits)'
+  },
+  'account.settings.field.birth.day': {
+    id: 'account.settings.field.birth.day',
+    description: 'Birth day field label',
+    defaultMessage: 'Birth day'
+  },
+  'account.settings.field.birth.day.empty': {
+    id: 'account.settings.field.birth.day.empty',
+    description: 'Empty birth day field label',
+    defaultMessage: 'Select day'
+  },
+  'account.settings.field.birth.month': {
+    id: 'account.settings.field.birth.month',
+    description: 'Birth month field label',
+    defaultMessage: 'Birth month'
+  },
+  'account.settings.field.birth.month.empty': {
+    id: 'account.settings.field.birth.month.empty',
+    description: 'Empty birth month field label',
+    defaultMessage: 'Select month'
+  },
+  'account.settings.field.birth.month.january': {
+    id: 'account.settings.field.birth.month.january',
+    description: 'January month',
+    defaultMessage: 'January'
+  },
+  'account.settings.field.birth.month.february': {
+    id: 'account.settings.field.birth.month.february',
+    description: 'February month',
+    defaultMessage: 'February'
+  },
+  'account.settings.field.birth.month.march': {
+    id: 'account.settings.field.birth.month.march',
+    description: 'March month',
+    defaultMessage: 'March'
+  },
+  'account.settings.field.birth.month.april': {
+    id: 'account.settings.field.birth.month.april',
+    description: 'April month',
+    defaultMessage: 'April'
+  },
+  'account.settings.field.birth.month.may': {
+    id: 'account.settings.field.birth.month.may',
+    description: 'May month',
+    defaultMessage: 'May'
+  },
+  'account.settings.field.birth.month.june': {
+    id: 'account.settings.field.birth.month.june',
+    description: 'June month',
+    defaultMessage: 'June'
+  },
+  'account.settings.field.birth.month.july': {
+    id: 'account.settings.field.birth.month.july',
+    description: 'July month',
+    defaultMessage: 'July'
+  },
+  'account.settings.field.birth.month.august': {
+    id: 'account.settings.field.birth.month.august',
+    description: 'August month',
+    defaultMessage: 'August'
+  },
+  'account.settings.field.birth.month.september': {
+    id: 'account.settings.field.birth.month.september',
+    description: 'September month',
+    defaultMessage: 'September'
+  },
+  'account.settings.field.birth.month.october': {
+    id: 'account.settings.field.birth.month.october',
+    description: 'October month',
+    defaultMessage: 'October'
+  },
+  'account.settings.field.birth.month.november': {
+    id: 'account.settings.field.birth.month.november',
+    description: 'November month',
+    defaultMessage: 'November'
+  },
+  'account.settings.field.birth.month.december': {
+    id: 'account.settings.field.birth.month.december',
+    description: 'December month',
+    defaultMessage: 'December'
+  },
   'account.settings.field.year_of_birth.options.empty': {
     id: 'account.settings.field.year_of_birth.options.empty',
     defaultMessage: 'Select a year of birth',
@@ -555,10 +730,10 @@ const messages = defineMessages({
     defaultMessage: 'No value set.',
     description: 'The placeholder for an empty but uneditable field when there is no administrator',
   },
-  'notification.preferences.notifications.label': {
-    id: 'notification.preferences.notifications.label',
-    defaultMessage: 'Notifications',
-    description: 'Label for Notifications',
+  'professional-information.preferences.professional-information.label': {
+    id: 'notification.preferences.professional-information.label',
+    defaultMessage: 'Профессиональная информация',
+    description: 'Label for Professional Information',
   },
   'account.settings.field.work.experience': {
     id: 'account.settings.work.experience',

@@ -17,9 +17,9 @@ const JumpNav = ({
       <Scrollspy
         items={[
           'basic-information',
+          'professional-information',
           'profile-information',
           'social-media',
-          'notifications',
           'site-preferences',
           'linked-accounts',
           'delete-account',
@@ -34,6 +34,11 @@ const JumpNav = ({
           </NavHashLink>
         </li>
         <li>
+          <NavHashLink to="#professional-information">
+            {intl.formatMessage(messages['professional-information.preferences.professional-information.label'])}
+          </NavHashLink>
+        </li>
+        <li>
           <NavHashLink to="#profile-information">
             {intl.formatMessage(messages['account.settings.section.profile.information'])}
           </NavHashLink>
@@ -41,11 +46,6 @@ const JumpNav = ({
         <li>
           <NavHashLink to="#social-media">
             {intl.formatMessage(messages['account.settings.section.social.media'])}
-          </NavHashLink>
-        </li>
-        <li>
-          <NavHashLink to="#notifications">
-            {intl.formatMessage(messages['notification.preferences.notifications.label'])}
           </NavHashLink>
         </li>
         <li>
