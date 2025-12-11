@@ -853,27 +853,27 @@ class AccountSettingsPage extends React.Component {
           </p>
 
           <EditableField
-            name="social_link_linkedin"
+            name="social_link_vk"
             type="text"
-            value={this.props.formValues.social_link_linkedin}
-            label={this.props.intl.formatMessage(messages['account.settings.field.social.platform.name.linkedin'])}
-            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.social.platform.name.linkedin.empty'])}
+            value={this.props.formValues.social_link_vk}
+            label={this.props.intl.formatMessage(messages['account.settings.field.social.platform.name.vk'])}
+            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.social.platform.name.vk.empty'])}
             {...editableFieldProps}
           />
           <EditableField
-            name="social_link_facebook"
+            name="social_link_telegram"
             type="text"
-            value={this.props.formValues.social_link_facebook}
-            label={this.props.intl.formatMessage(messages['account.settings.field.social.platform.name.facebook'])}
-            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.social.platform.name.facebook.empty'])}
+            value={this.props.formValues.social_link_telegram}
+            label={this.props.intl.formatMessage(messages['account.settings.field.social.platform.name.telegram'])}
+            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.social.platform.name.telegram.empty'])}
             {...editableFieldProps}
           />
           <EditableField
-            name="social_link_twitter"
+            name="social_link_max"
             type="text"
-            value={this.props.formValues.social_link_twitter}
-            label={this.props.intl.formatMessage(messages['account.settings.field.social.platform.name.twitter'])}
-            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.social.platform.name.twitter.empty'])}
+            value={this.props.formValues.social_link_max}
+            label={this.props.intl.formatMessage(messages['account.settings.field.social.platform.name.max'])}
+            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.social.platform.name.max.empty'])}
             {...editableFieldProps}
           />
         </div>

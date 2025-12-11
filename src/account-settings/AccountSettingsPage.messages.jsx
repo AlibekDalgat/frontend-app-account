@@ -669,41 +669,41 @@ const messages = defineMessages({
     defaultMessage: 'Optionally, link your personal accounts to the social media icons on your {siteName} profile.',
     description: 'Section subheader for social media links settings',
   },
-  'account.settings.field.social.platform.name.linkedin': {
-    id: 'account.settings.field.social.platform.name.linkedin',
-    defaultMessage: 'LinkedIn',
-    description: 'Label for LinkedIn',
+  'account.settings.field.social.platform.name.vk': {
+    id: 'account.settings.field.social.platform.name.vk',
+    defaultMessage: 'VK',
+    description: 'Label for VK',
   },
-  'account.settings.field.social.platform.name.linkedin.empty': {
-    id: 'account.settings.field.social.platform.name.linkedin.empty',
-    defaultMessage: 'Add LinkedIn profile',
-    description: 'Placeholder for an empty LinkedIn field',
+  'account.settings.field.social.platform.name.vk.empty': {
+    id: 'account.settings.field.social.platform.name.vk.empty',
+    defaultMessage: 'Add VK profile',
+    description: 'Placeholder for an empty vk field',
   },
   'account.settings.jump.nav.delete.account': {
     id: 'account.settings.jump.nav.delete.account',
     defaultMessage: 'Delete My Account',
     description: 'Header for the user account deletion area',
   },
-  'account.settings.field.social.platform.name.twitter': {
-    id: 'account.settings.field.social.platform.name.twitter',
-    defaultMessage: 'Twitter',
-    description: 'Label for Twitter',
+  'account.settings.field.social.platform.name.telegram': {
+    id: 'account.settings.field.social.platform.name.telegram',
+    defaultMessage: 'telegram',
+    description: 'Label for telegram',
   },
-  'account.settings.field.social.platform.name.twitter.empty': {
-    id: 'account.settings.field.social.platform.name.twitter.empty',
-    defaultMessage: 'Add Twitter profile',
-    description: 'Placeholder for an empty Twitter field',
+  'account.settings.field.social.platform.name.telegram.empty': {
+    id: 'account.settings.field.social.platform.name.telegram.empty',
+    defaultMessage: 'Add Telegram profile',
+    description: 'Placeholder for an empty telegram field',
   },
 
-  'account.settings.field.social.platform.name.facebook': {
-    id: 'account.settings.field.social.platform.name.facebook',
-    defaultMessage: 'Facebook',
-    description: 'Label for Facebook',
+  'account.settings.field.social.platform.name.max': {
+    id: 'account.settings.field.social.platform.name.max',
+    defaultMessage: 'Max',
+    description: 'Label for Max',
   },
-  'account.settings.field.social.platform.name.facebook.empty': {
-    id: 'account.settings.field.social.platform.name.facebook.empty',
-    defaultMessage: 'Add Facebook profile',
-    description: 'Placeholder for an empty Facebook field',
+  'account.settings.field.social.platform.name.max.empty': {
+    id: 'account.settings.field.social.platform.name.max.empty',
+    defaultMessage: 'Add Max profile',
+    description: 'Placeholder for an empty Max field',
   },
   'account.settings.editable.field.action.save': {
     id: 'account.settings.editable.field.action.save',

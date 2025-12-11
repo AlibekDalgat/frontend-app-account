@@ -11,9 +11,9 @@ import { postVerifiedNameConfig } from '../certificate-preference/data/service';
 import { FIELD_LABELS } from './constants';
 
 const SOCIAL_PLATFORMS = [
-  { id: 'twitter', key: 'social_link_twitter' },
-  { id: 'facebook', key: 'social_link_facebook' },
-  { id: 'linkedin', key: 'social_link_linkedin' },
+  { id: 'vk', key: 'social_link_vk' },
+  { id: 'telegram', key: 'social_link_telegram' },
+  { id: 'max', key: 'social_link_max' },
 ];
 
 function unpackAccountResponseData(data) {
