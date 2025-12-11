@@ -251,6 +251,16 @@ const messages = defineMessages({
     defaultMessage: 'Add year of birth',
     description: 'Placeholder for empty account settings year of birth field.',
   },
+  'account.settings.field.month.empty': {
+    id: 'account.settings.field.month.empty',
+    defaultMessage: 'Add month of birth',
+    description: 'Placeholder for empty account settings month of birth field.',
+  },
+  'account.settings.field.day.empty': {
+    id: 'account.settings.field.day.empty',
+    defaultMessage: 'Add day of birth',
+    description: 'Placeholder for empty account settings day of birth field.',
+  },
   'account.settings.field.phone.number': {
     id: 'account.settings.field.phone.number',
     description: 'Phone number field label',

@@ -677,7 +677,11 @@ class AccountSettingsPage extends React.Component {
                       { value: '12', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.december']) },
                     ]}
                     label={this.props.intl.formatMessage(messages['account.settings.field.birth.month'])}
+                    emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.month.empty'])}
                     {...editableFieldProps}
+                    onSubmit={(formId, value) => {
+                      this.handleSubmit(formId, value === '' ? 0 : value);
+                    }}
                   />
                 </div>
                 <div className="flex-grow-1">
@@ -693,7 +697,11 @@ class AccountSettingsPage extends React.Component {
                       }))
                     ]}
                     label={this.props.intl.formatMessage(messages['account.settings.field.birth.day'])}
+                    emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.day.empty'])}
                     {...editableFieldProps}
+                    onSubmit={(formId, value) => {
+                      this.handleSubmit(formId, value === '' ? 0 : value);
+                    }}
                   />
                 </div>
               </div>
