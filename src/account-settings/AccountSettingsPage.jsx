@@ -643,15 +643,61 @@ class AccountSettingsPage extends React.Component {
           <ResetPassword email={this.props.formValues.email} />
           {(!getConfig().ENABLE_COPPA_COMPLIANCE)
             && (
-            <EditableSelectField
-              name="year_of_birth"
-              type="select"
-              label={this.props.intl.formatMessage(messages['account.settings.field.dob'])}
-              emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.dob.empty'])}
-              value={this.props.formValues.year_of_birth}
-              options={yearOfBirthOptions}
-              {...editableFieldProps}
-            />
+            <div className="date-of-birth-group">
+              <div className="d-flex flex-row gap-3 align-items-start mb-3">
+                <div className="flex-grow-1">
+                  <EditableSelectField
+                    name="year_of_birth"
+                    type="select"
+                    label={this.props.intl.formatMessage(messages['account.settings.field.dob'])}
+                    emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.dob.empty'])}
+                    value={this.props.formValues.year_of_birth}
+                    options={yearOfBirthOptions}
+                    {...editableFieldProps}
+                  />
+                </div>
+                <div className="flex-grow-1">
+                  <EditableSelectField
+                    name="birth_month"
+                    type="select"
+                    value={this.props.formValues.birth_month}
+                    options={[
+                      { value: '', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.empty']) },
+                      { value: '1', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.january']) },
+                      { value: '2', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.february']) },
+                      { value: '3', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.march']) },
+                      { value: '4', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.april']) },
+                      { value: '5', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.may']) },
+                      { value: '6', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.june']) },
+                      { value: '7', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.july']) },
+                      { value: '8', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.august']) },
+                      { value: '9', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.september']) },
+                      { value: '10', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.october']) },
+                      { value: '11', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.november']) },
+                      { value: '12', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.december']) },
+                    ]}
+                    label={this.props.intl.formatMessage(messages['account.settings.field.birth.month'])}
+                    {...editableFieldProps}
+                  />
+                </div>
+                <div className="flex-grow-1">
+                  <EditableSelectField
+                    name="birth_day"
+                    type="select"
+                    value={this.props.formValues.birth_day}
+                    options={[
+                      { value: '', label: this.props.intl.formatMessage(messages['account.settings.field.birth.day.empty']) },
+                      ...Array.from({ length: 31 }, (_, i) => ({
+                        value: (i + 1).toString(),
+                        label: (i + 1).toString()
+                      }))
+                    ]}
+                    label={this.props.intl.formatMessage(messages['account.settings.field.birth.day'])}
+                    {...editableFieldProps}
+                  />
+                </div>
+              </div>
+            </div>
             )}
           <EditableField
             name="phone_number"
@@ -746,49 +792,6 @@ class AccountSettingsPage extends React.Component {
             helpText={this.props.intl.formatMessage(messages['account.settings.field.company.inn.help.text'])}
             {...editableFieldProps}
           />
-
-          <div className="row">
-            <div className="col-md-3">
-              <EditableSelectField
-                name="birth_month"
-                type="select"
-                value={this.props.formValues.birth_month}
-                options={[
-                  { value: '', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.empty']) },
-                    { value: '1', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.january']) },
-                    { value: '2', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.february']) },
-                    { value: '3', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.march']) },
-                    { value: '4', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.april']) },
-                    { value: '5', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.may']) },
-                    { value: '6', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.june']) },
-                    { value: '7', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.july']) },
-                    { value: '8', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.august']) },
-                    { value: '9', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.september']) },
-                    { value: '10', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.october']) },
-                    { value: '11', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.november']) },
-                    { value: '12', label: this.props.intl.formatMessage(messages['account.settings.field.birth.month.december']) },
-                ]}
-                label={this.props.intl.formatMessage(messages['account.settings.field.birth.month'])}
-                {...editableFieldProps}
-              />
-            </div>
-            <div className="col-md-3">
-              <EditableSelectField
-                name="birth_day"
-                type="select"
-                value={this.props.formValues.birth_day}
-                options={[
-                  { value: '', label: this.props.intl.formatMessage(messages['account.settings.field.birth.day.empty']) },
-                  ...Array.from({ length: 31 }, (_, i) => ({
-                    value: (i + 1).toString(),
-                    label: (i + 1).toString()
-                  }))
-                ]}
-                label={this.props.intl.formatMessage(messages['account.settings.field.birth.day'])}
-                {...editableFieldProps}
-              />
-            </div>
-          </div>
         </div>
 
         <div className="account-section pt-3 mb-5" id="profile-information" ref={this.navLinkRefs['#profile-information']}>
