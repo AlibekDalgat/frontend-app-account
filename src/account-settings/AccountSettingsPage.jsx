@@ -39,6 +39,8 @@ import BetaLanguageBanner from './BetaLanguageBanner';
 import EmailField from './EmailField';
 import OneTimeDismissibleAlert from './OneTimeDismissibleAlert';
 import DOBModal from './DOBForm';
+import { getTranslatedLanguageName, getTranslatedLanguageOptions } from '../utils';
+
 import {
   YEAR_OF_BIRTH_OPTIONS,
   EDUCATION_LEVELS,
@@ -119,7 +121,14 @@ class AccountSettingsPage extends React.Component {
     return concatTimeZoneOptions;
   });
 
-  getLocalizedOptions = memoize((locale, country) => ({
+  getLocalizedOptions = memoize((locale, country) => {
+  const standardLanguageOptions = getLanguageList(locale).map(({ code, name }) => ({ value: code, label: name }));
+  const translatedLanguageOptions = standardLanguageOptions.map(option => ({
+    ...option,
+    label: getTranslatedLanguageName(option.value, option.label)
+  }));
+
+  return {
     countryOptions: [{
       value: '',
       label: this.props.intl.formatMessage(messages['account.settings.field.country.options.empty']),
@@ -139,7 +148,7 @@ class AccountSettingsPage extends React.Component {
     languageProficiencyOptions: [{
       value: '',
       label: this.props.intl.formatMessage(messages['account.settings.field.language_proficiencies.options.empty']),
-    }].concat(getLanguageList(locale).map(({ code, name }) => ({ value: code, label: name }))),
+    }].concat(translatedLanguageOptions),
     yearOfBirthOptions: [{
       value: '',
       label: this.props.intl.formatMessage(messages['account.settings.field.year_of_birth.options.empty']),
@@ -156,7 +165,8 @@ class AccountSettingsPage extends React.Component {
       value: key,
       label: key === '' ? this.props.intl.formatMessage(messages['account.settings.field.work.experience.options.empty']) : key,
     })),
-  }));
+  };
+});
 
   canDeleteAccount = () => {
     const { committedValues } = this.props;
