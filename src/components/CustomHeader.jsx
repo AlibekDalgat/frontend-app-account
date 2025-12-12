@@ -31,7 +31,6 @@ const CustomHeader = () => {
       </a>
       <div className="container-xl py-2 d-flex align-items-center">
 
-        {/* Лого слева */}
         <a
           href={appConfig.LMS_BASE_URL + '/dashboard'}
           className="logo d-flex align-items-center me-4"
@@ -105,6 +104,11 @@ const CustomHeader = () => {
               type="button"
               className="dropdown-toggle btn btn-outline-primary d-flex align-items-center"
               onClick={toggleDropdown}
+              style={{
+                borderColor: '#2F2F60',
+                color: '#2F2F60',
+                backgroundColor: 'transparent'
+              }}
             >
               <svg
                 aria-hidden="true"
