@@ -12,7 +12,7 @@ import { createRoot } from 'react-dom/client';
 import { Route, Routes, Outlet } from 'react-router-dom';
 
 import CustomHeader from './components/CustomHeader';
-import { FooterSlot } from '@edx/frontend-component-footer';
+import CustomFooter from './components/CustomFooter';
 
 import configureStore from './data/configureStore';
 import AccountSettingsPage, { NotFoundPage } from './account-settings';
@@ -35,7 +35,7 @@ subscribe(APP_READY, () => {
               <main className="flex-grow-1" id="main">
                 <Outlet />
               </main>
-              <FooterSlot />
+              <CustomFooter />
             </div>
         )}
           >
