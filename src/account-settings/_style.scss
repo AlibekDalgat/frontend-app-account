@@ -371,15 +371,10 @@ $primary-light: #EDE8F5 !default;
 
 
   .date-of-birth-group {
-    .d-flex {
-      @include media-breakpoint-down(md) {
-        flex-direction: column;
-        gap: 1rem !important;
-      }
-    }
+    .pgn-transition-replace-group {
+      margin-bottom: 15px;
 
-    .flex-grow-1 {
-      .form-group {
+      &:last-child {
         margin-bottom: 0;
       }
     }
@@ -390,13 +385,6 @@ $primary-light: #EDE8F5 !default;
       font-weight: 600;
       font-size: 0.875rem;
       color: $text-color;
-    }
-  }
-
-  .date-of-birth-group .form-group label {
-    @include media-breakpoint-up(md) {
-      font-size: 0.8rem;
-      opacity: 0.8;
     }
   }
 }
