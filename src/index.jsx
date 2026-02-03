@@ -11,7 +11,7 @@ import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Route, Routes, Outlet } from 'react-router-dom';
 
-import CustomHeader from './components/CustomHeader';
+import { AccountHeader } from './components/AccountHeader';
 import CustomFooter from './components/CustomFooter';
 
 import configureStore from './data/configureStore';
@@ -31,7 +31,7 @@ subscribe(APP_READY, () => {
         <Routes>
           <Route element={(
             <div className="d-flex flex-column" style={{ minHeight: '100vh' }}>
-              <CustomHeader />
+              <AccountHeader />
               <main className="flex-grow-1" id="main">
                 <Outlet />
               </main>
