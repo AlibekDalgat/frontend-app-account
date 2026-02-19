@@ -27,6 +27,11 @@ const messages = defineMessages({
     defaultMessage: 'Учётная запись',
     description: 'Ссылка на настройки аккаунта в выпадающем меню',
   },
+  rewards: {
+    id: 'account.header.rewardsLink',
+    defaultMessage: 'Мои награды',
+    description: 'Ссылка на награды пользователя в выпадающем меню',
+  },
   signOut: {
     id: 'account.header.exitLink',
     defaultMessage: 'Выйти',
