@@ -31,11 +31,15 @@ subscribe(APP_READY, () => {
         <Routes>
           <Route element={(
             <div className="d-flex flex-column" style={{ minHeight: '100vh' }}>
-              <AccountHeader />
+              <div className="app-header-fixed">
+                <AccountHeader />
+              </div>
               <main className="flex-grow-1" id="main">
                 <Outlet />
               </main>
-              <CustomFooter />
+              <div className="app-footer">
+                <CustomFooter />
+              </div>
             </div>
         )}
           >
