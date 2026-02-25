@@ -770,7 +770,7 @@ class AccountSettingsPage extends React.Component {
             label={this.props.intl.formatMessage(messages['account.settings.field.position'])}
             emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.position.empty'])}
             helpText={this.props.intl.formatMessage(messages['account.settings.field.position.help.text'])}
-            isEditable={false}
+            isEditable={this.props.formValues.cashback_user_id}
             {...editableFieldProps}
           />
           <EditableField
