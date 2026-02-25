@@ -321,6 +321,11 @@ const messages = defineMessages({
     description: 'Empty position field label',
     defaultMessage: 'Add position'
   },
+  'account.settings.field.position.disable': {
+    id: 'account.settings.field.position.disable',
+    description: 'Disable position field label',
+    defaultMessage: 'Добавление должности недоступно'
+  },
   'account.settings.field.position.help.text': {
     id: 'account.settings.field.position.help.text',
     description: 'Help text for position field',
