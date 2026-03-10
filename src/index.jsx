@@ -4,7 +4,7 @@ import 'regenerator-runtime/runtime';
 import 'formdata-polyfill';
 import { AppProvider, ErrorPage } from '@edx/frontend-platform/react';
 import {
-  subscribe, initialize, APP_INIT_ERROR, APP_READY, mergeConfig,
+  subscribe, initialize, APP_INIT_ERROR, APP_READY, mergeConfig, getConfig
 } from '@edx/frontend-platform';
 import React, { StrictMode } from 'react';
 // eslint-disable-next-line import/no-unresolved
@@ -22,8 +22,31 @@ import messages from './i18n';
 import './index.scss';
 import Head from './head/Head';
 
+const applyWidgetTheme = () => {
+  const config = getConfig();
+  const root = document.documentElement;
+
+  root.style.setProperty('--primary', '#2F2F60');
+  root.style.setProperty('--primary-light', '#EDE8F5');
+
+  if (!config.WIDGET_MODE) {
+    return;
+  }
+
+  root.style.setProperty('--primary', config.WIDGET_BRAND_PRIMARY);
+  root.style.setProperty('--primary-light', config.WIDGET_BRAND_PRIMARY_LIGHT);
+
+  if (config.WIDGET_MODE && config.WIDGET_LOGO_URL) {
+    document.body.setAttribute('data-widget-mode', 'true');
+    document.documentElement.style.setProperty('--widget-logo-url', `url(${config.WIDGET_LOGO_URL})`);
+  } else {
+    document.body.removeAttribute('data-widget-mode');
+  }
+};
+
 const rootNode = createRoot(document.getElementById('root'));
 subscribe(APP_READY, () => {
+  applyWidgetTheme();
   rootNode.render(
     <StrictMode>
       <AppProvider store={configureStore()}>

@@ -1,8 +1,5 @@
 $text-color: $gray-800 !default;
 $text-color-primary: $gray-700 !default;
-$primary: #2F2F60;
-$primary-light: #EDE8F5 !default;
-
 
 .page__account-settings {
   max-width: 1600px;
@@ -80,8 +77,8 @@ $primary-light: #EDE8F5 !default;
 
             &.font-weight-bold {
               a {
-                background: $primary-light;
-                color: $primary;
+                background: var(--primary-light);
+                color: var(--primary);
                 text-decoration: none;
               }
             }
@@ -91,14 +88,14 @@ $primary-light: #EDE8F5 !default;
               font-size: 14px;
               font-weight: 500;
               line-height: 20px;
-              color: $primary;
+              color: var(--primary);
               text-decoration: none;
               padding: 8px 12px;
               border-radius: 6px;
 
               &:hover {
-                background: $primary-light;
-                color: $primary;
+                background: var(--primary-light);
+                color: var(--primary);
                 text-decoration: none;
               }
             }
@@ -132,7 +129,7 @@ $primary-light: #EDE8F5 !default;
     }
 
     a.standalone-link {
-      color: $primary;
+      color: var(--primary);
     }
 
     button.btn-outline-danger {
@@ -147,7 +144,7 @@ $primary-light: #EDE8F5 !default;
 
   .pgn-transition-replace-group + .form-group {
     border: 1px solid #E5E7EB;
-    border-left: 8px solid $primary-light;
+    border-left: 8px solid var(--primary-light);
     padding: 15px !important;
     margin: 0 0 15px !important;
     border-radius: 8px;
@@ -168,16 +165,16 @@ $primary-light: #EDE8F5 !default;
         &.btn-link {
           font-weight: 600;
           font-size: 16px;
-          color: $primary;
+          color: var(--primary);
           padding: 7px 13px !important;
-          border: 1px solid $primary !important;
+          border: 1px solid var(--primary) !important;
           color: #fff !important;
           text-decoration: none !important;
           font-size: 14px !important;
           font-weight: 500;
           line-height: 20px;
           margin: 0 !important;
-          background: $primary;
+          background: var(--primary);
           border-radius: 8px;
 
           svg {
@@ -195,17 +192,17 @@ $primary-light: #EDE8F5 !default;
       margin: 10px 0 0 !important;
       box-shadow: none;
       padding: 15px !important;
-      background: $primary-light !important;
+      background: var(--primary-light) !important;
 
       a {
-        color: $primary;
+        color: var(--primary);
       }
     }
   }
 
   .pgn-transition-replace-group {
     border: 1px solid #E5E7EB;
-    border-left: 8px solid $primary-light;
+    border-left: 8px solid var(--primary-light);
     padding: 15px !important;
     margin: 0 0 15px !important;
     border-radius: 8px;
@@ -220,7 +217,7 @@ $primary-light: #EDE8F5 !default;
     }
 
     p.small.text-muted, div.pgn__form-text.pgn__form-text-default  {
-      background: $primary-light;
+      background: var(--primary-light);
       padding: 10px 15px;
       border-radius: 6px;
       font-size: 14px;
@@ -245,7 +242,7 @@ $primary-light: #EDE8F5 !default;
         button {
           font-weight: 600;
           font-size: 16px;
-          color: $primary;
+          color: var(--primary);
           margin: 0 !important;
         }
       }
@@ -262,7 +259,7 @@ $primary-light: #EDE8F5 !default;
 
         button {
           padding: 7px 13px !important;
-          border: 1px solid $primary !important;
+          border: 1px solid var(--primary) !important;
           color: #fff !important;
           text-decoration: none !important;
           font-size: 14px !important;
@@ -272,7 +269,7 @@ $primary-light: #EDE8F5 !default;
           position: absolute;
           right: 15px;
           top: 15px;
-          background: $primary;
+          background: var(--primary);
           border-radius: 8px;
           outline-offset: 3px;
 
@@ -312,14 +309,14 @@ $primary-light: #EDE8F5 !default;
 
         button {
           padding: 7px 13px !important;
-          border: 1px solid $primary !important;
+          border: 1px solid var(--primary) !important;
           color: #fff !important;
           text-decoration: none !important;
           font-size: 14px !important;
           font-weight: 500;
           line-height: 20px;
           margin: 0 0 0 15px !important;
-          background: $primary;
+          background: var(--primary);
           border-radius: 8px;
 
           &.btn-outline-primary {
@@ -334,9 +331,9 @@ $primary-light: #EDE8F5 !default;
 
   .btn-link {
     text-decoration: none !important;
-    border: 1px solid $primary !important;
+    border: 1px solid var(--primary) !important;
     color: #fff !important;
-    background: $primary !important;
+    background: var(--primary) !important;
     padding: 7px 13px !important;
     font-size: 14px !important;
     font-weight: 500 !important;
@@ -351,9 +348,9 @@ $primary-light: #EDE8F5 !default;
 
   .btn.btn-link {
     text-decoration: none !important;
-    border: 1px solid $primary !important;
+    border: 1px solid var(--primary) !important;
     color: #fff !important;
-    background: $primary !important;
+    background: var(--primary) !important;
     padding: 7px 13px !important;
     font-size: 14px !important;
     font-weight: 500 !important;

@@ -14,7 +14,7 @@
   "account.settings.section.demographics.information": "Необязательная информация",
   "account.settings.section.site.preferences": "Настройки сайта",
   "account.settings.section.linked.accounts": "Подключённые учётные записи",
-  "account.settings.section.linked.accounts.description": "Вы можете связать свои учетные записи, чтобы упростить вход в {siteName} .",
+  "account.settings.section.linked.accounts.description": "Вы можете связать свои учетные записи, чтобы упростить вход в {siteName}.",
   "account.settings.field.username": "Имя пользователя",
   "account.settings.field.username.help.text": "Имя, которое идентифицирует вас на {siteName} . Вы не можете изменить свое имя пользователя.",
   "account.settings.field.full.name": "Полное имя",
