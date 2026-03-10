@@ -4,8 +4,8 @@
 // the file and use the Micro-frontend i18n pattern in new repositories.
 //
 
-import messagesFromAccount from './messages/frontend-app-account';
+import messagesOfRuLanguage from './ru.json';
 
-export default [
-  messagesFromAccount,
-];
+export default {
+  'ru': messagesOfRuLanguage,
+};
